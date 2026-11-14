@@ -1,18 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
-    :root {
-      --white: #f5f5f2;
-      --paper: #efefe9;
-      --off-white: #e7e4df;
-      --black: #0b0b0d;
-      --soft-black: #17171a;
-      --mid: #8e8a84;
-      --line: rgba(12, 12, 14, 0.18);
-      --shadow: rgba(0, 0, 0, 0.18);
-      --shadow-strong: rgba(0, 0, 0, 0.32);
-      --panel: rgba(255, 255, 255, 0.54);
-      --panel-strong: rgba(255, 255, 255, 0.72);
-      --canvas-dark: #0e0f12;
+        :root {
+      --white: #f8fafc;
+      --silver: #cbd5e1;
+      --gold: #d4af37;
+      --gold-light: #f3e5ab;
+      --black: #09090b;
+      --soft-black: #18181b;
+      --mid: #94a3b8;
+      --line: rgba(212, 175, 55, 0.25); 
+      --shadow: rgba(0, 0, 0, 0.4);
+      --panel: rgba(15, 15, 18, 0.65); 
+      --canvas-dark: #09090b;
     }
 
     * { box-sizing: border-box; }
@@ -200,14 +199,21 @@
       box-shadow: 0 14px 26px rgba(0,0,0,0.12);
     }
 
-    .meta {
+        .meta {
       display: flex;
       gap: 18px;
       flex-wrap: wrap;
-      color: rgba(11,11,13,0.72);
+      color: var(--silver);
       font-size: 0.72rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
+      background: rgba(9, 9, 11, 0.75);
+      border: 1px solid var(--line);
+      padding: 12px 18px;
+      border-radius: 8px;
+      backdrop-filter: blur(8px);
+      width: fit-content;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
     }
 
     .meta span {
@@ -221,8 +227,8 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: var(--black);
-      box-shadow: 0 0 0 2px rgba(0,0,0,0.06);
+      background: var(--gold);
+      box-shadow: 0 0 8px var(--gold);
     }
 
     .profile-card {
@@ -241,7 +247,7 @@
       border: 1px solid rgba(11,11,13,0.2);
       background:
         linear-gradient(180deg, rgba(12,12,14,0.2), rgba(12,12,14,0.55)),
-        url('') center/cover no-repeat;
+        url('/asset/rem.jpeg') center/cover no-repeat;
       overflow: hidden;
       box-shadow: inset 0 0 26px rgba(0,0,0,0.14);
     }
@@ -283,8 +289,13 @@
     .content-grid {
       display: grid;
       grid-template-columns: 1.2fr 0.8fr;
+      align-items: start;
       gap: 28px;
       margin-top: 42px;
+    }
+
+    .content-grid.single {
+      grid-template-columns: 1fr;
     }
 
     .panel {
@@ -344,7 +355,7 @@
 
     .stats {
       display: grid;
-      grid-template-columns: repeat(3, minmax(90px, 1fr));
+      grid-template-columns: repeat(2, minmax(90px, 1fr));
       gap: 14px;
       margin-top: 18px;
     }
@@ -498,4 +509,3 @@
         font-size: clamp(2.6rem, 15vw, 4rem);
       }
     }
-  
