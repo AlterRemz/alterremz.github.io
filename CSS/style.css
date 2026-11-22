@@ -484,6 +484,52 @@
       text-transform: uppercase;
     }
 
+      /* Dynamic Dark Mode Theme (Triggered via script.js) */
+      body.dark-mode {
+        background: linear-gradient(180deg, #0b0b0d 0%, #17171a 100%);
+        color: var(--white);
+      }
+
+      body.dark-mode .topbar,
+      body.dark-mode .panel,
+      body.dark-mode .profile-card {
+        background: rgba(23, 23, 26, 0.72);
+        border-color: rgba(245, 245, 242, 0.16);
+      }
+
+      body.dark-mode .brand,
+      body.dark-mode h1,
+      body.dark-mode .gradient-text,
+      body.dark-mode .section-title,
+      body.dark-mode .stat b,
+      body.dark-mode .tag,
+      body.dark-mode .timeline strong,
+      body.dark-mode .contact-list a,
+      body.dark-mode .eyebrow {
+        color: var(--white);
+      }
+
+      body.dark-mode .nav a,
+      body.dark-mode .lead,
+      body.dark-mode p,
+      body.dark-mode .meta,
+      body.dark-mode .stat span,
+      body.dark-mode .timeline span,
+      body.dark-mode footer {
+        color: rgba(245, 245, 242, 0.75);
+      }
+
+      body.dark-mode .button {
+        background: rgba(255, 255, 255, 0.08);
+        color: var(--white);
+        border-color: rgba(245, 245, 242, 0.25);
+      }
+
+      body.dark-mode .button.primary {
+        background: var(--white);
+        color: var(--black);
+      }
+
     @media (max-width: 900px) {
       .hero,
       .content-grid {

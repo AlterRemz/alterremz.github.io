@@ -1,4 +1,8 @@
+    // 1. setup
     const canvas = document.getElementById('scene');
+    const themeBtn = document.querySelector('#theme-toggle');
+
+    // 2. inisialisasi scene & animasi 3d three.js
     const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(window.innerWidth, window.innerHeight);
@@ -70,6 +74,16 @@
     }
 
     animate();
+
+    // 3. event handler untuk interaktivitas dinamis
+    function toggleTheme() {
+      const isDark = document.body.classList.toggle('dark-mode');
+      themeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+      particleMaterial.color.setHex(isDark ? 0xf5f5f2 : 0x1e1e1f);
+    }
+
+    // 4. event listeners
+    themeBtn.addEventListener('click', toggleTheme);
 
     window.addEventListener('resize', () => {
       camera.aspect = window.innerWidth / window.innerHeight;
