@@ -263,9 +263,12 @@
       position: absolute;
       left: 24px;
       bottom: 22px;
+      width: 240px;
+      height: 76px;
       padding: 12px 18px;
       background: rgba(255,255,255,0.14);
       border: 1px solid rgba(255,255,255,0.18);
+      margin: 4px;
       backdrop-filter: blur(8px);
       box-shadow: 0 12px 30px rgba(0,0,0,0.14);
     }
